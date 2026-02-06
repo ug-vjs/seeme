@@ -416,6 +416,83 @@ body.light-mode .movie-title { background: #007700; color: #fff; }
   <div class="header-inner">
     <div class="logo">
 
+<!-- BOTTOM ANCHOR AD -->
+<div id="anchor-ad-bottom">
+  <div id="anchor-toggle-bottom">▲ Ad</div>
+  <div id="anchor-content-bottom">
+    
+    <!-- 768 by 90 -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:768px;height:90px;max-width:100%;"
+         data-ad-client="ca-pub-2269884583846743"
+         data-ad-slot="5742141919"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+</div>
+
+<style>
+/* -------- BOTTOM AD -------- */
+#anchor-ad-bottom {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: 100%;
+  max-width: 768px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+  border-top: 1px solid #ddd;
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+}
+#anchor-toggle-bottom {
+  background: #f1f1f1;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  padding: 4px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+#anchor-content-bottom {
+  transition: all 0.3s ease;
+}
+
+/* Page spacing so content isn’t hidden */
+body {
+  padding-bottom: 120px;
+}
+
+/* Make ins responsive */
+#anchor-content-bottom ins {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 768px;
+}
+</style>
+
+<script>
+const toggleBottom = document.getElementById("anchor-toggle-bottom");
+const contentBottom = document.getElementById("anchor-content-bottom");
+
+let hiddenBottom = false;
+
+toggleBottom.addEventListener("click", function(){
+  if(!hiddenBottom){
+    contentBottom.style.display="naone";
+    toggleBottom.innerHTML="▼ Ad";
+    hiddenBottom = true;
+  } else {
+    contentBottom.style.display="block";
+    toggleBottom.innerHTML="▲ Ad";
+    hiddenBottom = false;
+  }
+});
+</script>
 
 
 </div>
